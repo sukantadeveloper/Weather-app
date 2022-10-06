@@ -1,0 +1,125 @@
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 404px;
+    width: 807px;
+}
+.mapouter {
+    /* position: relative; */
+    text-align: right;
+    height: 334px;
+    width: 807px;
+}
+/* #map{
+    border-radius: 20px;
+    border: 5px solid silver;
+} */
+#navbar{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(223, 221, 221);
+    align-items: center;
+   
+}
+
+#search{
+  
+    width: 50%;
+    background-color: whitesmoke;
+        /* border: 2px solid blue; */
+        border-radius: 10px;
+        margin-left: 30px;
+}
+#search button{
+    width: 20%;
+    background-color: #48484a;
+    color: white;
+    padding: 10px;
+    border-radius: 0px 10px 10px 0px;
+    font-size: large;
+    
+}
+#search input{
+    border:none;
+    padding: 12px;
+    width: 75.6%;
+    border-radius: 10px 0px 0px 10px;
+  
+}
+#search input:focus{
+    outline: none;
+}
+#changedegree{
+    width:37%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70px;
+}
+#changedegree button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    
+}
+#logo{
+    width: 32px;
+    height: 32px;
+}
+#parent{
+    display: flex;
+    justify-content: space-between;
+   
+    width: 92%;
+    margin: auto;
+    padding-top: 100px;
+}
+#date-time{
+    color: #ed8164 ;
+}
+/* #cityheading{
+    font-size: 45px;
+} */
+
+#details{   
+      display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-left: 2px solid #ed8164;
+    padding-left: 20px;
+  
+}
+#details h3{
+    margin: 5px;
+  
+}
+#weatherLogo{
+    display: flex;
+    align-items:  center;
+}
+#sevenday{
+    
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+#sevenday div{
+    border: 1px  solid black;
+    text-align: center;
+    margin-top: 2px;
+ background-color:#48484a;
+    color: white;
+    font-weight: bolder;
+   
+    
+}
+#sevenday img{
+    display: block;
+    margin-top: -35px;
+    margin-bottom: -35px;
+  
+}
