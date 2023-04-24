@@ -76,9 +76,52 @@ function append(sdata2) {
 
   gmap_canvas.src = `https://maps.google.com/maps?q=${sdata2.name}&t=k&z=13&ie=UTF8&iwloc=&output=embed`;
 
-  var dt = new Date();
-  document.getElementById("date-time").innerHTML =
-  dt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+  // create a new Date object
+  const date = new Date();
+
+  // create an array of month names
+  const months = [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december",
+  ];
+
+  // get the current day, month, and year
+  const day = date.getDate();
+  const monthIndex = date.getMonth();
+  const year = date.getFullYear();
+
+  // get the current hours and minutes
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+
+  // set "am" or "pm" based on the current hour
+  const ampm = hours >= 12 ? "pm" : "am";
+
+  // convert hours from 24-hour format to 12-hour format
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+
+  // format the time string
+  const timeString = `${hours}:${
+    minutes < 10 ? "0" + minutes : minutes
+  }${ampm}`;
+
+  // format the date string
+  const dateString = `${day} ${months[monthIndex]} ${year}`;
+
+  document.getElementById(
+    "date-time"
+  ).innerHTML = `${timeString} ${dateString} `;
 }
 
 // sevendaydata = async (lat, lon)=> {
