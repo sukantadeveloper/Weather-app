@@ -78,14 +78,7 @@ function append(sdata2) {
 
   var dt = new Date();
   document.getElementById("date-time").innerHTML =
-    dt.toLocaleString("default", { month: "short" }) +
-    " " +
-    dt.getDay() +
-    ", " +
-    dt.getHours() +
-    ":" +
-    dt.getMinutes();
-  console.log(sdata2);
+  dt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
 // sevendaydata = async (lat, lon)=> {
