@@ -124,23 +124,6 @@ function append(sdata2) {
   ).innerHTML = `${timeString} ${dateString} `;
 }
 
-// sevendaydata = async (lat, lon)=> {
-//   console.log(lat , lon ,"currentData")
-// let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=a77df68bcd9e098229cb3c8e6441dfbc`;
-// try {
-// let res = await fetch(url);
-// let data = await res.json();
-// console.log("data History", data);
-
-// } catch (error) {
-// console.log(error);
-// }
-
-// };
-
-// currentLocation();
-
-// 7 days
 
 sevendaydata = async (lat, lon) => {
   let sdata = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=a77df68bcd9e098229cb3c8e6441dfbc&units=metric`;
